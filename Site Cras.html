@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CRAS - cursos e eventos</title>
+        <style>
+            header {
+                background-color: rgb(59, 130, 229);
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: large;
+                color: white;
+                text-align: center;
+                padding: 5px;
+            }
+
+            nav a {
+                margin: 0 10px;
+                color: white;
+                cursor: pointer;
+            }
+
+            section {
+                display: none;
+                padding: 20px;
+            }
+
+            section.active {
+                display: block;
+            }
+            
+            .noticias {
+                background-color: #ff9929;
+                border-radius: 5px;
+                margin: 10px;
+                padding: 10px;
+
+            }
+
+            .cursos, .eventos {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .cursos div, .eventos div {
+                background-color: #ff9929;
+                padding: 10px;
+                border-radius: 5px;
+                width: 200px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transition: transform 0.2s ease-in-out;
+                display: flex;
+                flex-direction: column;
+                align-items: center; 
+                justify-content: center; 
+            }
+
+            .cursos div:hover, .eventos div:hover {
+                transform: scale(1.05);
+            }
+
+            .cursos h3, .eventos h3 {
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            .cursos p, .eventos p {
+                text-align: center;
+            }
+
+            img {
+                width: 150px;
+                margin-bottom: 10px; 
+            }
+
+            .sobre div {
+                background-color: rgb(147, 185, 255);
+                padding: 10px;
+                border-radius: 5px;
+                margin-top: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <header>
+            <h1>Bem-vindo ao CRAS</h1>
+            <nav>
+                <a onclick="mostrarSecao('inicial')">Início</a>
+                <a onclick="mostrarSecao('Cursos')">Cursos</a>
+                <a onclick="mostrarSecao('Eventos')">Eventos</a>
+                <a onclick="mostrarSecao('sobre')">Sobre</a>
+                <a onclick="mostrarSecao('contato')">Contato</a>
+            </nav>
+        </header>
+
+        <!-- Seção de Início -->
+        <section id="inicial" class="active">
+
+            <h2>Notícias</h2>
+            <div class="noticias">
+                <div style="background-color:aliceblue;padding: 7px;margin: 5px; border-radius: 5px;">
+                    <h4> Distribuição de Vale Gás </h4> 
+                    <p> O Centro de Referência de Assistência Social (CRAS) informa que a nova etapa de distribuição do Vale Gás já está disponível para famílias cadastradas no programa. O benefício é destinado a famílias em situação de vulnerabilidade social e inscritas no Cadastro Único (CadÚnico), seguindo os critérios estabelecidos pelo Governo do Estado.
+                        <br>
+                        A entrega será realizada no CRAS, nos dias 10 a 15 de març. Para retirar o vale, é necessário apresentar um documento oficial com foto e o Número de Identificação Social (NIS).
+                        <br>
+                        Pedimos que os beneficiários fiquem atentos às datas para evitar filas e garantir o recebimento do auxílio. Em caso de dúvidas ou para verificar se seu nome está na lista de contemplados, procure o CRAS mais próximo ou entre em contato. </p>
+                        <br>
+            </div>
+            <div style="background-color:aliceblue; padding: 7px;margin: 5px; margin-top:10px; border-radius: 5px;">
+                    <h4> Renovação de Documentos</h4>
+                    <p> O CRAS reforça a importância da renovação de documentos essenciais, como RG e CPF. Manter seus documentos atualizados evita problemas no acesso a benefícios sociais e demais serviços públicos.
+                        <br>
+                        Confira os prazos e orientações para renovação:
+                        <br>
+                        ✅ RG – Renovação pode ser feita nos postos de atendimento do governo estadual mediante apresentação da via antiga e certidão de nascimento ou casamento.
+                        <br>
+                        ✅ CPF – Pode ser atualizado online pelo site da Receita Federal ou presencialmente em uma agência dos Correios, Banco do Brasil ou Caixa Econômica.
+                        <br>
+                        Caso precise de apoio para regularizar sua documentação, o CRAS está à disposição para orientações. Para mais informações, procure a unidade mais próxima ou entre em contato..
+                        <br>
+                        <br>
+                        <b>📢 Fique atento aos prazos e evite transtornos!</b></p>
+            </div>
+            </div>
+        </section>
+
+        <!-- Seção de Cursos -->
+        <section id="Cursos">
+            <h2>Cursos oferecidos pelo CRAS</h2>
+            <div class="cursos">
+                <div>
+                    <h3>Curso de Manicure</h3>
+                    <img src="https://negociosdebeleza.beautyfair.com.br/wp-content/uploads/2024/12/curso-de-manicure-e-pedicure.webp"  />
+                    <p>Aprenda as técnicas de manicure e pedicure para cuidar das unhas com profissionalismo.</p>
+                    <p> Data 00/00/000 <br>
+                         Local: CRAS </p>
+                </div>
+                <div>
+                    <h3>Curso de Confeitaria</h3>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyro-FHfWz3gs_umi5AV6czvIImh-LXyvvYg&s">
+                    <p>Desenvolva suas habilidades na arte da confeitaria e crie delícias para todos os gostos.</p>
+                    <p> Data 00/00/000 <br>
+                        Local: CRAS </p>
+                </div>
+                <div>
+                    <h3>Curso de Cabeleireiro</h3>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6LEAVXCFaIsj0lt5y7jreOtCkiLA-E75MnQ&s">
+                    <p>Aprenda cortes, penteados e cuidados com os cabelos para se tornar um especialista.</p>
+                    <p> Data 00/00/000 <br>
+                        Local: CRAS </p>
+                </div>
+                <div>
+                    <h3>Curso de Maquiagem</h3>
+                    <img src="https://www.acordabonita.com/wp-content/uploads/2013/07/curso-AB-de-automaquiagem-online-gratis.jpg" >
+                    <p>Domine as técnicas de maquiagem e realce a beleza de seus clientes com produtos e estilos diversos.</p>
+                    <p> Data 00/00/000 <br>
+                        Local: CRAS </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Eventos -->
+        <section id="Eventos">
+            <h2>Eventos oferecidos pelo CRAS</h2>
+            <div class="eventos">
+                <div>
+                    <h3>Forró dos Velhos</h3>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzmwTbvjG56VnrfbZXKkcADI3GMz-7JNFXYg&s">
+                    <p>Venha participar de um animado evento de forró! O "Forró dos Velhos" é uma dança típica nordestina
+                        que promove a integração e diversão para todas as idades. Traga sua energia e junte-se a nós para
+                        dançar e se divertir com muita música e alegria!</p>
+                    <p> Data 00/00/000 <br>
+                        Local: CRAS </p>
+                </div>
+                <div>
+                    <h3>Zumba</h3>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/US_Army_52862_Zumba_adds_Latin_dance_to_fitness_routine.jpg">
+                    <p>Participe de uma aula de Zumba, uma atividade divertida e energizante que mistura dança e exercícios
+                        aeróbicos. Uma excelente forma de cuidar da saúde, melhorar a forma física e se divertir ao som de
+                        músicas animadas!</p>
+                    <p> Data 00/00/000 <br>
+                        Local: CRAS </p>
+                </div>
+                <div>
+                    <h3>Pintura em Cerâmica</h3>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfJr8cSrgqLm5k_3VDA24STyQGlI877s5k2w&s" >
+                    <p>Desperte sua criatividade em um evento de pintura em cerâmica! Aprenda técnicas de pintura e personalize
+                        suas peças de cerâmica, criando obras de arte únicas. Ideal para quem quer explorar a arte e desenvolver
+                        novas habilidades manuais.</p>
+                    <p> Data 00/00/000 <br>
+                        Local: CRAS </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção sobre o CRAS -->
+        <section id="sobre" class="sobre">
+            <div>
+            <h2>Sobre o CRAS</h2>
+                <p>O Centro de Referência de Assistência Social (CRAS) é um espaço fundamental de apoio e acolhimento para a comunidade,
+                com o objetivo de promover o acesso a serviços de assistência social e fortalecer a cidadania. Ele oferece uma variedade
+                de cursos e eventos gratuitos, com foco no desenvolvimento social e profissional dos cidadãos.</p>
+            </div>
+
+            <div> 
+
+            <h2> Serviços oferecidos</h2>
+            <div style="background-color:aliceblue ;">
+                <p> <b>PAIF (Serviço de Proteção e Atendimento Integral à Família):</b> Este serviço oferece apoio às famílias em situação de
+                    vulnerabilidade, visando à promoção da autonomia e do fortalecimento de vínculos familiares e comunitários.</p>
+            </div>
+            <div style="background-color:aliceblue ;">
+                <p> <b>SCFV (Serviço de Convivência e Fortalecimento de Vínculos):</b> Este serviço é destinado a crianças, adolescentes,
+                    idosos e suas famílias, com atividades que buscam fortalecer os vínculos familiares e sociais, promovendo o desenvolvimento
+                    de habilidades sociais, culturais e educativas.</p>
+            </div>
+         </div>
+            
+            
+        </section>
+
+        <!-- Seção de Contato -->
+        <section id="contato">
+            <h3><b> Prefeitura Quixadá </b></h3>
+            <p>www.quixada.ce.gov.br</p>
+
+            <h3><b> Contato Whatssap </b></h3>
+            <p>(88)9 81025391</p>
+
+            <h3><b> Endereço </b></h3>
+            <p>Av. Belo Horizonte - Campo Velho </p>
+
+            <h3><b> Horário de Funcionamento</b></h3>
+            <p>Segunda a Quinta: 07h30 às 17h30 <br>
+                Sexta - 07h30 ás 13h30
+            </p> 
+            
+        </section>
+
+        <script>
+            // Função que altera a seção visível
+            function mostrarSecao(secao) {
+                // Esconde todas as seções
+                document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+                // Ativa apenas a seção clicada
+                document.getElementById(secao).classList.add("active");
+            }
+        </script>
+
+    </body>
+</html>
