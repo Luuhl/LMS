@@ -95,7 +95,6 @@
             </nav>
         </header>
 
-        <!-- Seção de Início -->
         <section id="inicial" class="active">
 
             <h2>Notícias</h2>
@@ -127,7 +126,6 @@
             </div>
         </section>
 
-        <!-- Seção de Cursos -->
         <section id="Cursos">
             <h2>Cursos oferecidos pelo CRAS</h2>
             <div class="cursos">
@@ -162,7 +160,6 @@
             </div>
         </section>
 
-        <!-- Seção de Eventos -->
         <section id="Eventos">
             <h2>Eventos oferecidos pelo CRAS</h2>
             <div class="eventos">
@@ -196,7 +193,6 @@
             </div>
         </section>
 
-        <!-- Seção sobre o CRAS -->
         <section id="sobre" class="sobre">
             <div>
             <h2>Sobre o CRAS</h2>
@@ -222,7 +218,6 @@
             
         </section>
 
-        <!-- Seção de Contato -->
         <section id="contato">
             <h3><b> Prefeitura Quixadá </b></h3>
             <p>www.quixada.ce.gov.br</p>
@@ -241,11 +236,8 @@
         </section>
 
         <script>
-            // Função que altera a seção visível
             function mostrarSecao(secao) {
-                // Esconde todas as seções
                 document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
-                // Ativa apenas a seção clicada
                 document.getElementById(secao).classList.add("active");
             }
         </script>
